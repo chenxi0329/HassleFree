@@ -1,4 +1,5 @@
 import operator
+#136
 class Solution:
     def singleNumber0(self,nums):
         count = {}
