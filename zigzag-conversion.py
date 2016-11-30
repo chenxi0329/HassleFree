@@ -8,7 +8,7 @@ class Solution(object):
                                             #direction will be changed after first run
         rows, idx = [""]*numRows, 0
         for char in str:
-            rows[idx] += char
+            rows[idx] += char                ###each String in rows stands for one row in final result 
             if idx == 0 or idx == numRows-1: #change direction if it hits border
                 direction = -direction       #build a great wall! 
             idx += direction                 # move index to next cell 

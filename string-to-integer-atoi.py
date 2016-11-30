@@ -12,10 +12,12 @@ class Solution(object):
 
         # make sure we take care of negative sign
         sign = -1 if str[0] =="-" else 1
-
+        ### be careful about what you are putting here
+        
         # get rid of + or - sign, if first digit contains non-number non +/- char
         # it will fail first loop and return
         if str[0] in ("+", "-"):
+        ### be careful about what you are putting here
             str = str[1:]
 
         res, idx = 0, 0

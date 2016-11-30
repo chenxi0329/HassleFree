@@ -8,6 +8,7 @@ class TreeNode(object):
 class Solution(object):
     def levelOrderBottom0(self, root):
         if root == None:
+            # don't return root here, root is None but program is looking for a list
             return []
 
         queue, res = [root], []
