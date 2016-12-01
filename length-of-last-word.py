@@ -6,6 +6,7 @@ class Solution:
     def lengthOfLastWord1(self, str):
         length = 0
         str=str.strip()
+        #how to reverse a String in Python way
         for char in reversed(str):
             if char != " ":
                 length += 1

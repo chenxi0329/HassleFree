@@ -4,8 +4,10 @@ class Solution:
     def singleNumber0(self,nums):
         count = {}
         for num in nums:
-            count[num] = count.get(num, 0) + 1
+            #count.get(key_to_find, default value in case key is not in dict)
+            count[num] = count.get(num,0) + 1
 
+        #iterate a dict or hashtable by using .items() method
         for key,value in count.items():
             if value == 1:
                 return key
