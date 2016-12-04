@@ -10,6 +10,7 @@ class Solution:
         if not root:
             return root
         result,queue = [],[root]
+        ##declare a var to track which row we are checking
         level = 0
 
         while queue:
@@ -21,7 +22,7 @@ class Solution:
                 if len(result) == level:
                     result.append(node.val)
                 
-                #push right first here
+                ##push right first here
                 if node.right:
                     queue.append(node.right)
                 

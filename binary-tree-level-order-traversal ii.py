@@ -1,4 +1,5 @@
 #107
+#return array in bottom up way
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
@@ -6,6 +7,7 @@ class TreeNode(object):
         self.right = None
 
 class Solution(object):
+    #do it in BFS way by inserting to last position
     def levelOrderBottom0(self, root):
         if root == None:
             # don't return root here, root is None but program is looking for a list
@@ -22,10 +24,11 @@ class Solution(object):
                     queue.append(currNode.left)
                 if currNode.right:
                     queue.append(currNode.right)
+            #0 parameter first!!!
             res.insert(0,level)
         return res
 
-    # BFS _ list[::-1]
+    # use regular BFS and [::-1]
     def levelOrderBottom1(self, root):
         return Solution().levelOrder0(root)[::-1]
 

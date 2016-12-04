@@ -12,23 +12,24 @@ class Solution:
         if root == None:
             return 0
 
-        #initialize vars
-        level = 1
+        #if root is not None, then depth should be 1
+        depth = 1
         queue = [root]
 
         #start BFS
         while queue:
             for i in xrange(len(queue)):
-                #FIFO queue, pop from most left AKA earliest element
                 currNode = queue.pop(0)
                 if currNode.left:
                     queue.append(currNode.left)
                 if currNode.right:
                     queue.append(currNode.right)
+                #1. use == None to check noneness
+                #2. find first place where left,right == None 
                 if currNode.left == None and currNode.right == None:
-                    return level
-            level += 1
-        return level
+                    return depth
+            depth += 1
+        return depth
     
 if __name__ == "__main__":
     root = TreeNode(1)

@@ -6,11 +6,14 @@ class Solution:
             return 0
 
         #indexs for new/old sub lists
+        ##new starts from 0
+        ##old starts from 1
         new, old = 0,1   
 
         #while valid old index
         while old<len(nums):
             #if not a duplicated array
+            ##olnly deal ineqaul case
             if nums[new]!=nums[old]: 
                 #adjust new list entry point before moving element
                 new += 1                
@@ -18,7 +21,7 @@ class Solution:
                 #move element from old list to new list
                 nums[new] = nums[old] 
 
-            # process next element in old list for next iteration
+            ## process next element from old 
             old +=1        
 
         #old stores index for last old value

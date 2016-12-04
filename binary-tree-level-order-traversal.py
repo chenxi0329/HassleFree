@@ -24,6 +24,7 @@ class Solution:
                     queue.append(currNode.left)
                 if currNode.right:
                     queue.append(currNode.right)
+            #end of for loop means done with scanning current row
             res.append(level)
         return res
 
